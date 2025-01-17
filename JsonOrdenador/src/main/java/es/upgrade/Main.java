@@ -11,7 +11,23 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 public class Main {
+    /**
+     * Main entry point of the application.
+     * Reads a JSON file containing computer (Ordenador) information and displays it in a GUI.
+     * 
+     * The method performs the following steps:
+     * 1. Reads a JSON file from a specified path
+     * 2. Deserializes the JSON content into an Ordenador object
+     * 3. Creates and displays a GUI window showing the computer information
+     *
+     * @param args Command line arguments (not used)
+     * 
+     * @throws IOException If there's an error reading the JSON file
+     * @see Ordenador
+     * @see OrdenadorUI
+     */
     public static void main(String[] args) {
+
         Gson gson = new Gson();
         Ordenador ordenador = null;
         File f = new File("C:\\Users\\josea\\Documents\\LectorJsonOrdenador\\JsonOrdenador\\Ordenador.json");

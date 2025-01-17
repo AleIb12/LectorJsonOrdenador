@@ -26,7 +26,26 @@ public class OrdenadorUI extends JFrame {
         setVisible(true);
     }
 
+
+    /**
+     * Displays the detailed information of a computer in a text area.
+     * The information includes all components of the computer such as:
+     * - Basic details (name and price)
+     * - Processor(s)
+     * - Motherboard(s)
+     * - RAM modules
+     * - Hard drives
+     * - Power supply units
+     * - Graphics cards
+     * - Peripherals (keyboard, mouse, monitor)
+     * 
+     * Each component's information is displayed in a formatted section if it exists.
+     * The output is formatted with appropriate headers and indentation for readability.
+     * 
+     * @param ordenador The computer object containing all the components to be displayed
+     */
     public void mostrarOrdenador(Ordenador ordenador) {
+
         StringBuilder sb = new StringBuilder();
         sb.append("DETALLES DEL ORDENADOR\n");
         sb.append("======================\n\n");
