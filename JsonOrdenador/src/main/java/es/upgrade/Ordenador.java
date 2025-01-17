@@ -1,79 +1,134 @@
 package es.upgrade;
 
-import com.google.gson.annotations.SerializedName;
+import java.util.ArrayList;
 import java.util.List;
 
+import com.google.gson.annotations.SerializedName;
+
+import lombok.Data;
+
+@Data
 class Ordenador {
-    String nombre;
-    int precio;
-    List<Procesador> procesador;
-    List<PlacaBase> placaBase;
-    List<Ram> ram;
-    List<DiscoDuro> discoDuro;
-    List<FuenteAlimentacion> fuenteAlimentacion;
-    List<TarjetaGrafica> tarjetaGrafica;
-    List<Periferico> perifericos;
+    @SerializedName("nombre")
+    private String nombre;
+    @SerializedName("precio")
+    private int precio;
+    @SerializedName("procesador")
+    private List<Procesador> procesador = new ArrayList<>();
+    @SerializedName("PlacaBase")
+    private List<PlacaBase> placaBase = new ArrayList<>();
+    @SerializedName("Ram")
+    private List<Ram> ram = new ArrayList<>();
+    @SerializedName("DiscoDuro")
+    private List<DiscoDuro> discoDuro = new ArrayList<>();
+    @SerializedName("FuenteAlimentacion")
+    private List<FuenteAlimentacion> fuenteAlimentacion = new ArrayList<>();
+    @SerializedName("TarjetaGrafica")
+    private List<TarjetaGrafica> tarjetaGrafica = new ArrayList<>();
+    @SerializedName("Perifericos")
+    private List<Periferico> perifericos = new ArrayList<>();
 }
 
+@Data
 class Procesador {
-    String marca;
-    String modelo;
-    int hz;
+    @SerializedName("marca")
+    private String marca;
+    @SerializedName("modelo")
+    private String modelo;
+    @SerializedName("hz")
+    private int hz;
 }
 
+@Data
 class PlacaBase {
-    String modelo;
-    String marca;
-    int slotsRam;
+    @SerializedName("modelo")
+    private String modelo;
+    @SerializedName("marca")
+    private String marca;
+    @SerializedName("slotsRam")
+    private int slotsRam;
 }
 
+@Data
 class Ram {
-    String marca;
-    String tipo;
-    String capacidad;
-    int hz;
-    int cl;
+    @SerializedName("marca")
+    private String marca;
+    @SerializedName("tipo")
+    private String tipo;
+    @SerializedName("capacidad")
+    private String capacidad;
+    @SerializedName("hz")
+    private int hz;
+    @SerializedName("cl")
+    private int cl;
 }
 
+@Data
 class DiscoDuro {
-    String tipo;
-    String capacidad;
-    String marca;
+    @SerializedName("tipo")
+    private String tipo;
+    @SerializedName("capacidad")
+    private String capacidad;
+    @SerializedName("marca")
+    private String marca;
 }
 
+@Data
 class FuenteAlimentacion {
-    String marca;
-    String modelo;
+    @SerializedName("marca")
+    private String marca;
+    @SerializedName("modelo")
+    private String modelo;
     @SerializedName("Potencia")
-    int potencia;
+    private int potencia;
 }
 
+@Data
 class TarjetaGrafica {
-    String marca;
-    String modelo;
-    int cudas;
+    @SerializedName("marca")
+    private String marca;
+    @SerializedName("modelo")
+    private String modelo;
+    @SerializedName("Cudas")    // Changed from "cudas" to "Cudas" to match JSON
+    private int cudas;
 }
 
+@Data
 class Periferico {
-    Teclado teclado;
-    Raton raton;
-    Monitor monitor;
+    @SerializedName("Teclado")    // Changed from "teclado" to "Teclado"
+    private Teclado teclado;
+    @SerializedName("Raton")      // Changed from "raton" to "Raton"
+    private Raton raton;
+    @SerializedName("Monitor")    // Changed from "monitor" to "Monitor"
+    private Monitor monitor;
 }
 
+@Data
 class Teclado {
-    String marca;
-    String nombre;
-    String tipo;
+    @SerializedName("marca")
+    private String marca;
+    @SerializedName("nombre")
+    private String nombre;
+    @SerializedName("tipo")
+    private String tipo;
 }
 
+@Data
 class Raton {
-    String marca;
-    String nombre;
-    String tipo;
+    @SerializedName("marca")
+    private String marca;
+    @SerializedName("nombre")
+    private String nombre;
+    @SerializedName("tipo")
+    private String tipo;
 }
 
+@Data
 class Monitor {
-    String tipo;
-    String marca;
-    String nombre;
+    @SerializedName("tipo")
+    private String tipo;
+    @SerializedName("marca")
+    private String marca;
+    @SerializedName("nombre")
+    private String nombre;
 }
